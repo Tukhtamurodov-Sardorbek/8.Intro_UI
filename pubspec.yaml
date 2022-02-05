@@ -28,6 +28,7 @@ flutter:
   assets:
     - assets/intro_page/dark_mood/
     - assets/intro_page/light_mood/
+    - assets/readme/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

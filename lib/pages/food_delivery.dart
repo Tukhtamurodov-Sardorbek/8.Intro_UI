@@ -186,15 +186,16 @@ class _FoodDeliveryState extends State<FoodDelivery> {
                   const SizedBox(
                     height: 15,
                   ),
-                  Center(child: MaterialButton(
-                      onPressed: () {},
-                      minWidth: MediaQuery.of(context).size.width,
-                      height: 50,
-                      shape: const RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(10))
-                      ),
-                      color: const Color(0xff3b3b3b),
-                      child: const Text('Sign in', style: TextStyle(color: Colors.white, fontSize: 20), textAlign: TextAlign.center,)
+                  Center(
+                      child: MaterialButton(
+                          onPressed: () {},
+                          minWidth: MediaQuery.of(context).size.width,
+                          height: 50,
+                          shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(10))
+                          ),
+                          color: const Color(0xff3b3b3b),
+                          child: const Text('Sign in', style: TextStyle(color: Colors.white, fontSize: 20), textAlign: TextAlign.center,)
                   )),
                   const SizedBox(height: 20),
                   Center(
