@@ -8,4 +8,4 @@
 
 ![This is an image](assets/readme/img_1.png)
 
-![This is an image](assets/readme/img_2.png)
+![This is an image](assets/readme/food_delivery.png)
