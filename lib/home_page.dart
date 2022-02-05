@@ -1,6 +1,7 @@
 import 'package:extra_ui/pages/food_delivery.dart';
 import 'package:extra_ui/pages/intro_page_dark.dart';
 import 'package:extra_ui/pages/intro_page_light.dart';
+import 'package:extra_ui/pages/mentor\'s_sample/sample.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   Map<String, String> pages = {
+    Sample.id: 'Sample From Mentor',
     IntroPage.id: 'Intro Page Dark',
     IntroLight.id: 'Intro Page Light',
     FoodDelivery.id: 'Food Delivery'
