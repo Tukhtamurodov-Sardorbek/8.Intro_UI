@@ -9,9 +9,11 @@ class FoodDelivery extends StatefulWidget {
 }
 
 class _FoodDeliveryState extends State<FoodDelivery> {
-  Map<String, String> texts = {'Blah blah blah':'blah blah blah',
+  Map<String, String> texts = {
+    'Blah blah blah':'blah blah blah',
     'All Your Favourite Dishes' : 'Order from your nearby best restaurant in the town. You can easily order from anywhere, anytime',
-    'Unknown' : 'blah blah blah ...'};
+    'Unknown' : 'blah blah blah ...'
+  };
   int _pageIndex = 0;
 
   void _getStarted(BuildContext ctx) {
@@ -33,7 +35,10 @@ class _FoodDeliveryState extends State<FoodDelivery> {
             padding: const EdgeInsets.only(top: 40, left: 25, right: 25),
             height: MediaQuery.of(context).size.height * 0.75,
             decoration: const BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(50)),
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(50),
+                topLeft: Radius.circular(50),
+              )
             ),
             child: SingleChildScrollView(
               child: Column(
@@ -136,81 +141,79 @@ class _FoodDeliveryState extends State<FoodDelivery> {
         context: ctx,
         builder: (ctx) => Padding(
           /// Raise text field over keyboard
-          padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+          padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom * 0.62),
           child: Container(
             padding: const EdgeInsets.only(top: 40, left: 25, right: 25),
             height: MediaQuery.of(context).size.height * 0.65,
             decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(50)),
             ),
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text('Sign in Account', style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),),
-                  const SizedBox(height: 10),
-                  const Text('Sign in to continue', style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w600),),
-                  const SizedBox(height: 30),
-                  const Text('Email'),
-                  const SizedBox(height: 20),
-                  const TextField(
-                    keyboardType: TextInputType.name,
-                    decoration: InputDecoration(
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.grey)
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.grey)
-                        ),
-                        hintText: 'davin.wong@mail.com',
-                        suffixIcon: Icon(Icons.check_circle_outline, color: Colors.grey)
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                  const Text('PASSWORD'),
-                  const SizedBox(height: 20),
-                  const TextField(
-                    keyboardType: TextInputType.name,
-                    decoration: InputDecoration(
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.grey)
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.grey)
-                        ),
-                        hintText: '******',
-                        suffixIcon: Icon(Icons.visibility, color: Colors.grey)
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  Center(
-                      child: MaterialButton(
-                          onPressed: () {},
-                          minWidth: MediaQuery.of(context).size.width,
-                          height: 50,
-                          shape: const RoundedRectangleBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(10))
-                          ),
-                          color: const Color(0xff3b3b3b),
-                          child: const Text('Sign in', style: TextStyle(color: Colors.white, fontSize: 20), textAlign: TextAlign.center,)
-                  )),
-                  const SizedBox(height: 20),
-                  Center(
-                    child: RichText(
-                      text: const TextSpan(
-                          text: 'Don\'t have an account?',
-                          style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w600),
-                          children: [
-                            TextSpan(text: ' Sign up', style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w600)),
-                          ]
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text('Sign in Account', style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),),
+                const SizedBox(height: 10),
+                const Text('Sign in to continue', style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w600),),
+                const SizedBox(height: 30),
+                const Text('Email'),
+                const SizedBox(height: 20),
+                const TextField(
+                  keyboardType: TextInputType.name,
+                  decoration: InputDecoration(
+                      focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey)
                       ),
+                      enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey)
+                      ),
+                      hintText: 'davin.wong@mail.com',
+                      suffixIcon: Icon(Icons.check_circle_outline, color: Colors.grey)
+                  ),
+                ),
+                const SizedBox(height: 20),
+                const Text('PASSWORD'),
+                const SizedBox(height: 20),
+                const TextField(
+                  keyboardType: TextInputType.name,
+                  decoration: InputDecoration(
+                      focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey)
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey)
+                      ),
+                      hintText: '******',
+                      suffixIcon: Icon(Icons.visibility, color: Colors.grey)
+                  ),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Center(
+                    child: MaterialButton(
+                        onPressed: () {},
+                        minWidth: MediaQuery.of(context).size.width,
+                        height: 50,
+                        shape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(10))
+                        ),
+                        color: const Color(0xff3b3b3b),
+                        child: const Text('Sign in', style: TextStyle(color: Colors.white, fontSize: 20), textAlign: TextAlign.center,)
+                )),
+                const SizedBox(height: 20),
+                Center(
+                  child: RichText(
+                    text: const TextSpan(
+                        text: 'Don\'t have an account?',
+                        style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w600),
+                        children: [
+                          TextSpan(text: ' Sign up', style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w600)),
+                        ]
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ));
@@ -240,7 +243,6 @@ class _FoodDeliveryState extends State<FoodDelivery> {
                 ],
               ),
             ),
-
             /// PageView
             SizedBox(
               height: MediaQuery.of(context).size.height,

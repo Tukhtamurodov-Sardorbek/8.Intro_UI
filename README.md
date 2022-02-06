@@ -3,6 +3,7 @@
 
 - Bottom Sheet
 - Text Field
+- padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom * 0.6), (Raise text field over keyboard)
 
 ![This is an image](assets/readme/img.png)
 
